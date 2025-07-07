@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .dashboard-container {
+      background-color: #ffffff;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+    }
+
+    .dashboard-container h2 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .dashboard-container p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .dashboard-container a {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dashboard-container a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <h2>Welcome, {{ request.user.username }}</h2>
+    <p>This is your dashboard. You are logged in.</p>
+    <a href="{% url 'logout' %}">Logout</a>
+  </div>
+
+</body>
+</html>

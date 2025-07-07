@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Section</title>
+  <style>
+    body {
+      background-color: #f8f9fb;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .admin-container {
+      background-color: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      width: 420px;
+      text-align: center;
+    }
+
+    .admin-container h2 {
+      color: #dc3545; /* red for admin look */
+      margin-bottom: 1rem;
+    }
+
+    .admin-container p {
+      color: #444;
+      margin-bottom: 1.8rem;
+      font-size: 1rem;
+    }
+
+    .admin-container a {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .admin-container a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-container">
+    <h2>Admin Section</h2>
+    <p>This page is only for users with staff role or admin privileges.</p>
+    <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+  </div>
+
+</body>
+</html>
